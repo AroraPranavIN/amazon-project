@@ -16,7 +16,7 @@ export function getDeliveryOption(deliveryOptionId) {
   let deliveryOption;
   deliveryOptions.forEach((option) => {
     if (option.id === deliveryOptionId) {
-    deliveryOption = option;
+      deliveryOption = option;
     }
   });
   return deliveryOption || deliveryOptions[0];

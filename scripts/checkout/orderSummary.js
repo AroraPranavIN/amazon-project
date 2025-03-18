@@ -108,7 +108,7 @@ export function renderOrderSummary() {
 
   document.querySelectorAll('.js-delivery-option').forEach((element) => {
     element.addEventListener('click', () => {
-      const {productId, deliveryOptionId} = element.dataset;
+      const { productId, deliveryOptionId } = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
       renderPaymentSummary();
