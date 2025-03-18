@@ -34,7 +34,7 @@ export function renderOrderSummary() {
               ${matchingProduct.name}
             </div>
             <div class="product-price">
-              $${formatCurrency(matchingProduct.priceCents)}
+              ${matchingProduct.getPrice()}
             </div>
             <div class="product-quantity">
               <span>
@@ -108,7 +108,7 @@ export function renderOrderSummary() {
 
   document.querySelectorAll('.js-delivery-option').forEach((element) => {
     element.addEventListener('click', () => {
-      const {productId, deliveryOptionId} = element.dataset;
+      const { productId, deliveryOptionId } = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
       renderPaymentSummary();
